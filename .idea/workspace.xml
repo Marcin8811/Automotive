@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2f9c01d-17ff-4163-8a26-ab915a281d2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/f.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fun.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/if.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/number.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/variable.py" afterDir="false" />
+    <list default="true" id="d2f9c01d-17ff-4163-8a26-ab915a281d2a" name="Changes" comment="Automotive 27(1).09.2024">
+      <change afterPath="$PROJECT_DIR$/for.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Marcin8811"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Marcin8811/Automotive.git",
+    "accountId": "1bcc4461-25d8-4ee0-9707-f4953290781c"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -51,11 +49,13 @@
   "keyToString": {
     "Python.1.executor": "Run",
     "Python.f.executor": "Run",
+    "Python.for.executor": "Run",
     "Python.fun.executor": "Run",
     "Python.if.executor": "Run",
     "Python.input.executor": "Run",
     "Python.main.executor": "Run",
     "Python.number.executor": "Run",
+    "Python.spisok-list.executor": "Run",
     "Python.string.executor": "Run",
     "Python.string2.executor": "Run",
     "Python.variable.executor": "Run",
@@ -63,7 +63,7 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.if">
+  <component name="RunManager" selected="Python.for">
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -86,7 +86,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="f" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="for" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +99,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/f.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/for.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="input" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="spisok-list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -165,7 +165,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/input.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spisok-list.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.for" />
+        <item itemvalue="Python.spisok-list" />
         <item itemvalue="Python.if" />
         <item itemvalue="Python.variable" />
         <item itemvalue="Python.fun" />
-        <item itemvalue="Python.input" />
-        <item itemvalue="Python.f" />
       </list>
     </recent_temporary>
   </component>
@@ -222,6 +222,36 @@
       <option name="presentableId" value="Default" />
       <updated>1727276974148</updated>
     </task>
+    <task id="LOCAL-00001" summary="Automotive 27(1).09.2024">
+      <option name="closed" value="true" />
+      <created>1727455678504</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727455678504</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Automotive 27(1).09.2024">
+      <option name="closed" value="true" />
+      <created>1727455700569</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727455700569</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Automotive 27(1).09.2024">
+      <option name="closed" value="true" />
+      <created>1727455721544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727455721544</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Automotive 27.09.2024" />
+    <MESSAGE value="Automotive 27(1).09.2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automotive 27(1).09.2024" />
   </component>
 </project>
