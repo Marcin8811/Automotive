@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d2f9c01d-17ff-4163-8a26-ab915a281d2a" name="Changes" comment="Automotive 27(1).09.2024">
       <change afterPath="$PROJECT_DIR$/for.py" afterDir="false" />
+=======
+    <list default="true" id="d2f9c01d-17ff-4163-8a26-ab915a281d2a" name="Changes" comment="Automotive 27.09.2024">
+      <change afterPath="$PROJECT_DIR$/spisok-list.py" afterDir="false" />
+>>>>>>> 3115093122acb5380f0124cd793912b2aab2d339
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +68,11 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.for">
+=======
+  <component name="RunManager" selected="Python.spisok-list">
+>>>>>>> 3115093122acb5380f0124cd793912b2aab2d339
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -86,6 +95,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="for" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -108,6 +118,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+=======
+>>>>>>> 3115093122acb5380f0124cd793912b2aab2d339
     <configuration name="fun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -174,6 +186,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="spisok-list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spisok-list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="variable" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -198,11 +232,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Python.for" />
+=======
+>>>>>>> 3115093122acb5380f0124cd793912b2aab2d339
         <item itemvalue="Python.spisok-list" />
         <item itemvalue="Python.if" />
         <item itemvalue="Python.variable" />
         <item itemvalue="Python.fun" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Python.input" />
+>>>>>>> 3115093122acb5380f0124cd793912b2aab2d339
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +292,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Automotive 27.09.2024" />
+<<<<<<< HEAD
     <MESSAGE value="Automotive 27(1).09.2024" />
     <option name="LAST_COMMIT_MESSAGE" value="Automotive 27(1).09.2024" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="Automotive 27.09.2024" />
+>>>>>>> 3115093122acb5380f0124cd793912b2aab2d339
   </component>
 </project>
