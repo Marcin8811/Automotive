@@ -32,7 +32,7 @@ class Test_new_joke:
             print("Chuck присутствует")
         else:
             print("Chuck отсутствует")
-
+            
 
 if __name__ == "__main__":
     random_joke = Test_new_joke()
