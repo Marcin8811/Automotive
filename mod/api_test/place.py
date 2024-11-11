@@ -1,10 +1,8 @@
 import requests
 import time
 
-time.sleep(5)
-
-class Test_new_location():
-    """Работа с новой локацией"""
+class TestNewLocation:
+    """Тестирование работы с новой локацией"""
 
     def test_create_new_location(self):
         """Создание новой локации"""
@@ -33,25 +31,24 @@ class Test_new_location():
             "language": "French-IN"
         }
 
+        # Отправляем POST-запрос для создания локации
         result_post = requests.post(post_url, json=json_for_create_new_location)
         print("Ответ от POST-запроса:")
-        check_post = result_post.json()
-        print(check_post)
+        print(result_post.text)
         print("Статус код : " + str(result_post.status_code))
 
-        assert 200 == result_post.status_code
-        if result_post.status_code == 200:
-            print("Успешно!!! Создана новая локация")
-        else:
-            print("Провал! Запрос ошибочный")
+        # Проверка успешности запроса
+        assert 200 == result_post.status_code, f"Ошибка при создании локации, код ответа: {result_post.status_code}"
 
-        check_info_post = check_post.get("status")
-        print("Статус код ответа : " + check_info_post)
-        assert check_info_post == "OK"
+        check_post = result_post.json()
+        assert check_post.get("status") == "OK", "Ответ от сервера не содержит статус OK"
         print("Статус ответа верен")
 
         place_id = check_post.get("place_id")
         print("Place_id : " + place_id)
+
+        # Проверка, что place_id не пустой
+        assert place_id is not None, "place_id не найден!"
 
         """Проверка создания новой локации"""
 
@@ -61,16 +58,11 @@ class Test_new_location():
 
         result_get = requests.get(get_url)
         print("Ответ от GET-запроса:")
-        print(result_get.json())
+        print(result_get.text)
         print("Статус код : " + str(result_get.status_code))
 
-        assert 200 == result_get.status_code
-        if result_get.status_code == 200:
-            print("Проверка создания новой локации прошла успешно!")
-        else:
-            print("Провал! Запрос ошибочный")
-
-        # https: // rahulshettyacademy.com / maps / api / place / update / json?key = qaclick123
+        assert 200 == result_get.status_code, f"Ошибка при проверке локации, код ответа: {result_get.status_code}"
+        print("Проверка создания новой локации прошла успешно!")
 
         """Изменение новой локации"""
 
@@ -79,54 +71,89 @@ class Test_new_location():
         print("PUT URL:", put_url)
 
         json_for_update_new_location = {
-            "place_id": place_id,
-            "address": "100 Lenina street, RU"
+            "place_id": place_id,  # Используем правильный place_id
+            "address": "100 Lenina street, RU",
+            "name": "Updated Frontline House",  # Добавим новое имя, если требуется
+            "phone_number": "(+91) 983 893 3938"  # Обновим телефонный номер
         }
 
+        # Выполнение PUT-запроса
         result_put = requests.put(put_url, json=json_for_update_new_location)
-
-        # Печатаем сырое содержимое ответа от PUT-запроса
         print("Ответ от PUT-запроса (raw):", result_put.text)
         print("Код статуса от PUT-запроса:", result_put.status_code)
 
-        # Проверяем, что запрос прошел успешно
-        assert 200 == result_put.status_code
+        # Проверка успешности PUT-запроса
         if result_put.status_code == 200:
-            print("Изменение новой локации")
-
-            # Проверяем, что ответ от PUT-запроса содержит корректный JSON
             try:
-                response_json = result_put.json()
-                print("Ответ от PUT-запроса (JSON):", response_json)
-                # Если сообщение об успешном обновлении есть, выводим его
-                if 'msg' in response_json:
-                    print("Сообщение об успешном обновлении:", response_json['msg'])
+                # Попробуем декодировать ответ в JSON, если он не пустой
+                if result_put.text:
+                    put_response_json = result_put.json()
+                    print("Ответ от PUT-запроса в формате JSON:", put_response_json)
                 else:
-                    print("Сообщение 'msg' не найдено в ответе.")
-            except ValueError:
-                print("Ответ от PUT-запроса не является JSON. Ответ:", result_put.text)
+                    print("Ответ PUT-запроса пустой.")
+            except ValueError as e:
+                print(f"Ошибка при декодировании JSON: {e}")
+                print("Ответ от PUT-запроса (raw):", result_put.text)
         else:
-            print("Провал! Запрос ошибочный")
+            print(f"Ошибка PUT-запроса! Код статуса: {result_put.status_code}")
+            print("Ответ от PUT-запроса (raw):", result_put.text)
 
-            """Проверка изменения новой локации"""
+        # Добавляем небольшой таймаут для обновления данных на сервере
+        print("Ожидаем 10 секунд для обновления данных на сервере...")
+        time.sleep(10)  # Увеличено время ожидания до 10 секунд
 
-            result_get = requests.get(get_url)
-            print("Ответ от GET-запроса:")
-            print(result_get.json())
-            print("Статус код : " + str(result_get.status_code))
+        """Проверка изменения новой локации"""
+        result_get = requests.get(get_url)
+        print("Ответ от GET-запроса после PUT:")
+        print(result_get.text)
+        print("Статус код : " + str(result_get.status_code))
 
-            assert 200 == result_get.status_code
-            if result_get.status_code == 200:
-                print("Проверка изменения новой локации прошла успешно!")
-            else:
-                print("Провал! Запрос ошибочный")
-            check_address = result_get.json()
-            check_address_info = check_address.get("address")
-            print("Сообщение : " + check_address_info)
-            assert check_address_info == "100 Lenina street, RU"
-            print("Сообщение верно")
+        assert 200 == result_get.status_code, f"Ошибка при проверке обновленного адреса, код ответа: {result_get.status_code}"
 
+        check_address = result_get.json()
+        check_address_info = check_address.get("address")
+        print("Адрес после PUT-запроса : " + check_address_info)
 
-# Запуск теста
-new_place = Test_new_location()
+        # Проверка на правильность обновленного адреса
+        assert check_address_info == "100 Lenina street, RU", f"Адрес не обновился! Получен адрес: {check_address_info}"
+        print("Адрес верно обновлен")
+
+        """Удаление новой локации"""
+
+        delete_resource = "/maps/api/place/delete/json"
+        delete_url = base_url + delete_resource + key
+        print(delete_url)
+        json_for_delete_new_location = {
+            "place_id": place_id
+        }
+        result_delete = requests.delete(delete_url, json=json_for_delete_new_location)
+        print(result_delete.text)
+        print("Статус код : " + str(result_delete.status_code))
+
+        assert 200 == result_delete.status_code, f"Ошибка при удалении локации, код ответа: {result_delete.status_code}"
+        print("Удаление прошло успешно!")
+
+        # Проверка статуса удаления
+        check_status = result_delete.json()
+        check_status_info = check_status.get("status")
+        print("Сообщение : " + check_status_info)
+        assert check_status_info == "OK", f"Ошибка при удалении локации, сообщение от сервера: {check_status_info}"
+
+        """Проверка удаления новой локации"""
+
+        result_get = requests.get(get_url)
+        print("Ответ от GET-запроса после удаления:")
+        print(result_get.text)
+        print("Статус код : " + str(result_get.status_code))
+
+        # Проверка, что локация действительно была удалена
+        assert 404 == result_get.status_code, f"Локация не была удалена, код ответа: {result_get.status_code}"
+
+        print("Тест завершен успешно.")
+
+        print("Тестирование TestNewLocation завершено успешно")
+
+# Создаём объект теста
+new_place = TestNewLocation()
+# Запускаем тест
 new_place.test_create_new_location()
